@@ -1,6 +1,8 @@
 const { findUserByEmail } = require('../users/users.controllers')
 const { comparePassword } = require('../utils/crypto')
 
+
+
 const checkUsersCredentials = async (email, password) => {
     try {
         const user = await findUserByEmail(email)
@@ -9,9 +11,13 @@ const checkUsersCredentials = async (email, password) => {
             return user
         } 
         return null
+    
     } catch (error) {
-        return error
+        return null
     }
 }
 
-module.exports = checkUsersCredentials
+
+module.exports = {
+checkUsersCredentials
+}

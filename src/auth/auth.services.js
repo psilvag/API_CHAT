@@ -1,20 +1,20 @@
 const jwt = require('jsonwebtoken')
-
-const checkUsersCredentials = require('./auth.controllers')
+const authControllers = require('./auth.controllers')
 const jwtSecret = require('../../config').api.jwtSecret
+
 
 const postLogin = (req, res) => {
     const {email, password} = req.body
 
     if(email && password){
-        checkUsersCredentials(email, password)
+        authControllers.checkUsersCredentials(email, password)
             .then((data) => {
                 if(data){
                     const token = jwt.sign({
                         id: data.id,
                         email: data.email,
                         role: data.role
-                    }, jwtSecret)
+                    }, jwtSecret) 
 
                     res.status(200).json({
                         message: 'Correct Credentials!',
@@ -36,4 +36,13 @@ const postLogin = (req, res) => {
 }
 
 
-module.exports = postLogin
+
+
+
+
+
+module.exports = {
+postLogin
+}
+
+

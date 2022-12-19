@@ -43,8 +43,8 @@ const createUser = async (obj) => {
         lastName: obj.lastName,
         email: obj.email,
         password: hashPassword(obj.password),
-        gender: obj.gender,
-        birthday: obj.birthday
+        profileImage: obj.profileImage,
+        phone: obj.phone
     })
     return data
 }
@@ -68,7 +68,6 @@ const deleteUser = async (id) => {
     })
     return data[0]
 }
-
 
 module.exports = {
     findAllUsers,

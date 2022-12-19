@@ -15,13 +15,13 @@ passport.use(
         findUserById(tokenDecoded.id)
             .then((user) => {
                 if(user){
-                    done(null, tokenDecoded) //? Caso Exitoso, porque el usuario si existe
+                    done(null, tokenDecoded) 
                 } else {
-                    done(null, false) //? Caso fallido, en el que no genera error, pero no existe el usuario
+                    done(null, false)
                 }
             })
             .catch((err) => {
-                done(err, false) //? Caso fallido, en el que si genera un error
+                done(err, false) 
             })
     })
 )

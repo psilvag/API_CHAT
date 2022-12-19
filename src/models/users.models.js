@@ -33,12 +33,13 @@ const Users = db.define('users' ,{
         type: DataTypes.STRING,
         allowNull: false,
     },
-    gender: {
+    profileImage: {
         type: DataTypes.STRING,
     },
-    birthday: {
-        type: DataTypes.DATEONLY,
-        allowNull: false
+    phone:{
+        type:DataTypes.STRING,
+        allowNull:false,
+        unique:true
     },
     role: {
         type: DataTypes.STRING,
@@ -54,4 +55,4 @@ const Users = db.define('users' ,{
     }
 })
 
-module.exports = Users
+module.exports = Users          
