@@ -5,10 +5,12 @@ const cors = require('cors')
 //? Files
 const config = require('../config')
 const db = require('./utils/database')
+
 const initModels = require('./models/initModels')
 const userRouter = require('./users/users.router')
 const authRouter = require('./auth/auth.router')
 const conversationRouter=require('./conversations/conversations.router')
+
 //? Initial Configs
 
 const app = express()
@@ -34,9 +36,6 @@ app.get('/', (req, res) => {
     res.status(200).json({
         status: 200,
         message: 'Ok!',
-        routes: {
-            users: ""
-        }
     })
 })
 
