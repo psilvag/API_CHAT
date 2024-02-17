@@ -69,7 +69,9 @@ Status 404: Usuario no encontrado
 
 ```
 api/v1/users
+```
 
+```
 Retorna:
 
 Status 200: Retorna todos los usuarios
@@ -79,7 +81,9 @@ Status 400: Request Incorrecto
 
 ```
 api/v1/users/me
+```
 
+```
 Retorna:
 
 Status 200: Retorna la información de tu perfil
@@ -90,7 +94,9 @@ Status 404: Usuario no encontrado
 
 ```
 api/v1/users/:id
+```
 
+```
 Parametros:
 /:id - id del usuario buscado
 
@@ -106,6 +112,7 @@ Status 404: Usuario no encontrado
 ```
 api/v1/users/
 ```
+
 ```
 Modelo User:
 
@@ -141,6 +148,7 @@ Status 400: Request Incorrecto
 ```
 api/v1/users/me
 ```
+
 ```
 Modelo User:
 
@@ -201,7 +209,9 @@ Status 404: Usuario no encontrado
 
 ```
 api/v1/users/me
+```
 
+```
 Retorna:
 
 Status 204: Eliminación correcta del perfil
@@ -241,7 +251,9 @@ Status 404: Usuario no encontrado
 
 ```
 api/v1/chats
+```
 
+```
 Retorna:
 
 Status 200: Retorna todas las conversaciones del sistema
@@ -279,7 +291,9 @@ Status 400: Request Incorrecto
 
 ```
 api/v1/chats/me
+```
 
+```
 Retorna:
 
 Status 200: Retorna todas las conversaciones donde esta mi ID
@@ -289,7 +303,9 @@ Status 400: Request Incorrecto
 
 ```
 api/v1/chats/me/owner
+```
 
+```
 Retorna:
 
 Status 200: Retorna todas las conversaciones creadas como propietario
@@ -342,7 +358,9 @@ Status 404: Conversación no encontrada
 
 ```
 api/v1/chats/:conversation_id
+```
 
+```
 Retorna:
 
 Status 204: Elimina una conversacion por ID
